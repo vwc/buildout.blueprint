@@ -57,46 +57,54 @@ div.overlay div.close {
 
 .pb-ajax .documentActions {display:none}
 
-div.overlay div.close span,
-div.overlay div.close a {
-    display: block;
-    height: 1px;
-    margin: -1px 0 0 -1px;
-    overflow: hidden;
-    padding: 0;
-    width: 1px;
-}
 
-div.overlay textarea { width: 100%; }
-
-/* Hide form elements that don't make sense within an overlay. */
-div.overlay .link-parent { display: none; }
-div.overlay #createGroup legend { display: none; }
-div.overlay #createGroup fieldset { border: none; }
-
-/* lets play nice with paragraphs, links, tabbed pages in overlay e.g. when plone.openid is installed */
-div.overlay p {
-    margin-bottom: 1em;
-}
-div.overlay label {
-    margin-bottom: 0.25em;
-}
-div.overlay a:hover {
-    color: #75ad0a;
-}
-div.overlay a.selected {
-    color: #000000;
-}
-div.overlay .formTab {
-    margin-right:1em;
-    font-weight: bold;
-}
-div.overlay .formTab.lastFormTab {
-    margin-right:0em;
-}
-div.overlay .formControls a {
-    display: block;
-    margin: 0.75em;
+div.overlay {
+    div.close span,
+    div.close a {
+        display: block;
+        height: 1px;
+        margin: -1px 0 0 -1px;
+        overflow: hidden;
+        padding: 0;
+        width: 1px;
+    }
+    textarea {
+        width: 100%;
+    }
+    /* Hide form elements that don't make sense within an overlay. */
+    .link-parent {
+        display: none;
+    }
+    #createGroup {
+        legend,
+        fieldset {
+            display: none;
+        }
+    }
+    /* lets play nice with paragraphs, links, tabbed pages in overlay e.g. when plone.openid is installed */
+    p {
+        margin-bottom: 1em;
+    }
+    label {
+        margin-bottom: 0.25em;
+    }
+    a:hover {
+        color: #75ad0a;
+    }
+    a.selected {
+        color: #000000;
+    }
+    .formTab {
+        margin-right:1em;
+        font-weight: bold;
+        &.lastFormTab {
+            margin-right:0em;
+        }
+    }
+    .formControls a {
+        display: block;
+        margin: 0.75em;
+    }
 }
 
 /* @end */
