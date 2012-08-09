@@ -15,21 +15,32 @@ body {
 // Example styles for a custom editbar override of the basic
 // twitter bootstarp navbar to make the edit bar look like a
 // browser toolbar
-#editbar-wrapper {
-    .navbar-inner {
-        #gradient > .vertical(@grayLight, @grayLight);
+body > header {
+    #editbar-wrapper {
+        .navbar-inner {
+            #gradient > .vertical(@grayLight, @grayLight);
+            #editbar {
+                .brand {
+                    color: @textColor;
+                }
+            }
+        }
+    }
+    #editbar-wrapper + nav {
+        margin-top: @navbarHeight;
+        .navbar-inner {
+            .border-radius(0px);
+            .container {
+                width: @gridRowWidth;
+                .container-fixed();
+            }
+        }
     }
 }
 
-#editbar-wrapper + nav {
-    margin-top: @navbarHeight;
-}
-
-
 // Example styles for a HMTL5 based site footer
-footer {
-    background: @grayLighter;
+body > footer {
     margin-top: @baseLineHeight;
     padding: @baseLineHeight 0;
-    border-top: 1px solid @gray;
+    border-top: 1px solid @grayLighter;
 }
