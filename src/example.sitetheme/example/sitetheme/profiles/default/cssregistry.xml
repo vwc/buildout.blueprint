@@ -4,13 +4,17 @@
  <!-- Set conditions on stylesheets we don't want to pull in -->
  <stylesheet
      expression="not:request/HTTP_X_THEME_ENABLED | nothing"
+     id="columns.css"
+     />
+ <stylesheet
+     expression="not:request/HTTP_X_THEME_ENABLED | nothing"
      id="public.css"
      />
 
  <stylesheet title="" authenticated="False" cacheable="True"
     compression="safe" conditionalcomment="" cookable="True" enabled="on"
     expression="request/HTTP_X_THEME_ENABLED | nothing"
-    id="++theme++fd.sitetheme/css/styles.css" media="" rel="stylesheet"
+    id="++theme++example.sitetheme/css/styles.css" media="" rel="stylesheet"
     rendering="link"
     applyPrefix="True"
     />
