@@ -47,13 +47,15 @@
         <!-- CMSUI Editbar replacements -->
         <drop css:theme="#editbar-wrapper"
             css:if-content="#anon-personalbar" />
-        <replace css:theme-children="#editbar" css:content="#edit-bar" />
+        <!--<replace css:theme-children="#editbar" css:content="#edit-bar" />-->
+        <replace css:theme="#editbar-wrapper"
+            css:content="#toolbar" />
 
         <replace css:theme-children="#personal-tools" 
             css:content-children="#portal-personaltools" />
 
         <!-- Logo (link target) -->
-        <copy attributes="href" css:content="#portal-logo" css:theme="#logo" />
+        <copy attributes="href" css:content="#portal-logo" css:theme="a.brand" />
 
         <!-- Site actions -->
         <!--<replace css:content="#portal-siteactions li" css:theme-children="#global-nav" />-->
@@ -72,7 +74,7 @@
 
         <!-- Document Content -->
         <replace css:content-children="#content" 
-            css:theme-children="#main-content" />
+            css:theme-children="#content" />
         
         <before css:content=".portalMessage" css:theme="#document-content" />
         <replace css:content-children="#viewlet-below-content"

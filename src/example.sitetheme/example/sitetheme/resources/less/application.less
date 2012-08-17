@@ -36,6 +36,16 @@ body > header {
             }
         }
     }
+    #toolbar + nav {
+        margin-top: @navbarHeight;
+        .navbar-inner {
+            .border-radius(0px);
+            .container {
+                width: @gridRowWidth;
+                .container-fixed();
+            }
+        }
+    }
 }
 
 // Example styles for a HMTL5 based site footer
