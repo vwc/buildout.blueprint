@@ -5851,8 +5851,7 @@ dl.actionMenu.activated dd div {
 /* @group Data tables */
 table.listing,
 table.plain {
-  border-spacing: 0;
-  border-collapse: collapse;
+  margin-bottom: 20px;
 }
 table.invisible td,
 table.invisible th,
@@ -5860,117 +5859,53 @@ table.plain td,
 table.plain th,
 table.listing td,
 table.listing th {
+  padding: 0.5em 1em;
   vertical-align: top;
-  width: 100%;
-  margin-bottom: 20px;
-}
-table.invisible td th,
-table.invisible th th,
-table.plain td th,
-table.plain th th,
-table.listing td th,
-table.listing th th,
-table.invisible td td,
-table.invisible th td,
-table.plain td td,
-table.plain th td,
-table.listing td td,
-table.listing th td {
-  padding: 8px;
-  line-height: 20px;
-  text-align: left;
-  vertical-align: top;
-  border-top: 1px solid #dddddd;
-}
-table.invisible td th,
-table.invisible th th,
-table.plain td th,
-table.plain th th,
-table.listing td th,
-table.listing th th {
-  font-weight: bold;
-}
-table.invisible td thead th,
-table.invisible th thead th,
-table.plain td thead th,
-table.plain th thead th,
-table.listing td thead th,
-table.listing th thead th {
-  vertical-align: bottom;
-}
-table.invisible td caption + thead tr:first-child th,
-table.invisible th caption + thead tr:first-child th,
-table.plain td caption + thead tr:first-child th,
-table.plain th caption + thead tr:first-child th,
-table.listing td caption + thead tr:first-child th,
-table.listing th caption + thead tr:first-child th,
-table.invisible td caption + thead tr:first-child td,
-table.invisible th caption + thead tr:first-child td,
-table.plain td caption + thead tr:first-child td,
-table.plain th caption + thead tr:first-child td,
-table.listing td caption + thead tr:first-child td,
-table.listing th caption + thead tr:first-child td,
-table.invisible td colgroup + thead tr:first-child th,
-table.invisible th colgroup + thead tr:first-child th,
-table.plain td colgroup + thead tr:first-child th,
-table.plain th colgroup + thead tr:first-child th,
-table.listing td colgroup + thead tr:first-child th,
-table.listing th colgroup + thead tr:first-child th,
-table.invisible td colgroup + thead tr:first-child td,
-table.invisible th colgroup + thead tr:first-child td,
-table.plain td colgroup + thead tr:first-child td,
-table.plain th colgroup + thead tr:first-child td,
-table.listing td colgroup + thead tr:first-child td,
-table.listing th colgroup + thead tr:first-child td,
-table.invisible td thead:first-child tr:first-child th,
-table.invisible th thead:first-child tr:first-child th,
-table.plain td thead:first-child tr:first-child th,
-table.plain th thead:first-child tr:first-child th,
-table.listing td thead:first-child tr:first-child th,
-table.listing th thead:first-child tr:first-child th,
-table.invisible td thead:first-child tr:first-child td,
-table.invisible th thead:first-child tr:first-child td,
-table.plain td thead:first-child tr:first-child td,
-table.plain th thead:first-child tr:first-child td,
-table.listing td thead:first-child tr:first-child td,
-table.listing th thead:first-child tr:first-child td {
-  border-top: 0;
-}
-table.invisible td tbody + tbody,
-table.invisible th tbody + tbody,
-table.plain td tbody + tbody,
-table.plain th tbody + tbody,
-table.listing td tbody + tbody,
-table.listing th tbody + tbody {
-  border-top: 2px solid #dddddd;
-}
-table.invisible td tbody tr.success td,
-table.invisible th tbody tr.success td,
-table.plain td tbody tr.success td,
-table.plain th tbody tr.success td,
-table.listing td tbody tr.success td,
-table.listing th tbody tr.success td {
-  background-color: #dff0d8;
-}
-table.invisible td tbody tr.error td,
-table.invisible th tbody tr.error td,
-table.plain td tbody tr.error td,
-table.plain th tbody tr.error td,
-table.listing td tbody tr.error td,
-table.listing th tbody tr.error td {
-  background-color: #f2dede;
-}
-table.invisible td tbody tr.info td,
-table.invisible th tbody tr.info td,
-table.plain td tbody tr.info td,
-table.plain th tbody tr.info td,
-table.listing td tbody tr.info td,
-table.listing th tbody tr.info td {
-  background-color: #d9edf7;
 }
 table.listing td.listingCheckbox,
 table.listing th.listingCheckbox {
   text-align: center;
+}
+table.listing {
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+table.listing .top {
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+table.listing th {
+  text-align: left;
+  color: #999999;
+  border: 0.1em solid #e7e7e7;
+  border-style: solid solid none;
+  background: #eeeeee;
+}
+table.listing tr.odd th {
+  border: 0.1em solid #fff;
+  border-style: solid solid none none;
+}
+table.listing tbody th {
+  font-weight: bold;
+}
+table.listing tbody tr {
+  text-align: left;
+}
+table.listing tbody tr.odd {
+  background: #eee;
+}
+table.listing tbody tr td {
+  background: transparent;
+}
+table.listing tbody tr.odd td {
+  background: #eee;
+}
+table.listing td {
+  border-right: 1px solid #ddd;
+}
+.icons-on table.listing td {
+  line-height: 2em;
 }
 table.listing a {
   border: none;
@@ -5979,8 +5914,9 @@ table.listing a {
 }
 table.listing td.draggable {
   text-shadow: White 1px 1px 1px;
+  background: #ddd !important;
   border-bottom: 1px solid white;
-  width: auto;
+  padding: 0.4em 0.4em 0 0.5em;
 }
 /* Vertical table data listings */
 table.vertical th {

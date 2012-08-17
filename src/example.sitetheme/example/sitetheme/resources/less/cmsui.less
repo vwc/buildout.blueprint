@@ -618,8 +618,7 @@ dl.actionMenu.activated dd div {
 
 table.listing,
 table.plain {
-    border-spacing: 0;
-    border-collapse: collapse;
+    margin-bottom: @baseLineHeight;
 }
 
 table.invisible td,
@@ -628,9 +627,8 @@ table.plain td,
 table.plain th,
 table.listing td,
 table.listing th {
-    //padding: 0.5em 1em;
+    padding: 0.5em 1em;
     vertical-align: top;
-    .table();
 }
 table.plain th,
 table.plain td {
@@ -643,47 +641,47 @@ table.listing th.listingCheckbox {
 }
 
 
-//table.listing {
-//    border-left: 1px solid #ddd;
-//    border-bottom: 1px solid #ddd;
-//}
-//table.listing .top {
-//    border-left: 1px solid #ddd;
-//    border-top: 1px solid #ddd;
-//    border-right: 1px solid #ddd;
-//}
-//table.listing th {
-//    text-align: left;
-//    color: #666;
-//    border: 0.1em solid #e7e7e7;
-//    border-style: solid solid none;
-//    background: #ddd;
-//}
-//table.listing tr.odd th {
-//    border: 0.1em solid #fff;
-//    border-style: solid solid none none;
-//}
-//table.listing tbody th {
-//    font-weight: bold;
-//}
-//table.listing tbody tr {
-//    text-align:left;
-//}
-//table.listing tbody tr.odd {
-//    background: #eee;
-//}
-//table.listing tbody tr td {
-//    background: transparent;
-//}
-//table.listing tbody tr.odd td {
-//    background: #eee;
-//}
-//table.listing td {
-//    border-right: 1px solid #ddd;
-//}
-//.icons-on table.listing td {
-//    line-height: 2em;
-//}
+table.listing {
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+table.listing .top {
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+table.listing th {
+    text-align: left;
+    color: @grayLight;
+    border: 0.1em solid #e7e7e7;
+    border-style: solid solid none;
+    background: @grayLighter;
+}
+table.listing tr.odd th {
+    border: 0.1em solid #fff;
+    border-style: solid solid none none;
+}
+table.listing tbody th {
+    font-weight: bold;
+}
+table.listing tbody tr {
+    text-align:left;
+}
+table.listing tbody tr.odd {
+    background: #eee;
+}
+table.listing tbody tr td {
+    background: transparent;
+}
+table.listing tbody tr.odd td {
+    background: #eee;
+}
+table.listing td {
+    border-right: 1px solid #ddd;
+}
+.icons-on table.listing td {
+    line-height: 2em;
+}
 table.listing a {
     border: none;
     display: inline-block;
@@ -692,10 +690,9 @@ table.listing a {
 
 table.listing td.draggable {
     text-shadow: White 1px 1px 1px;
-    //background: #ddd !important;
+    background: #ddd !important;
     border-bottom: 1px solid white;
-    width: auto;
-    //padding: 0.4em 0.4em 0 0.5em;
+    padding: 0.4em 0.4em 0 0.5em;
 }
 /* Vertical table data listings */
 table.vertical {
