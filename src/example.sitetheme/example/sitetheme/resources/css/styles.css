@@ -5968,42 +5968,6 @@ table.grid th {
 .make-some-noise {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQAQMAAAC032DuAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMACHhIRQoAAAN7SURBVCiRAXADj/wAAkQJcM1mLQnAjAAb4sEhBjkWRBpWAIKF/FlkjVDJKKgA0KxA5QFOFWKpQgBG5PjjxiiDVJtnAHD5UwQVQstA7u8AOAYIMPmwiKga2gBooyeQA+jdVxiNABAIYGkr3lgTDBsAXQBAcGFmEGFEXQAwUgJEk6SsEMjDAApsetkgJK9PKJQAfDApaQUONGIDEgAKpcRsXsojEuY1ACYN4xSjdyGRVLcAsCBxpEiAUIkwYgBGLNoX24Yj9iJRAGMGy8gopJFOQvkAEZgtO9HAJC+9WACKQEJCwJGqpRoIAKYmUxdgMdl89AIApMRLQ/2pQLVbBQBDTLPsYJCDUEjoAHzhwoxoCKB4DAgAAN6ASuQFERMyvQCzWAJoFpkGjFsGAGLQnTrBTH4zIKIAFGUFG3UALzJDiwCmsCEwxUDwgFgIAFi/LtLBIAUJNBEAE4TENLhU8TjOCgAtAYILmwxnJrBoAAhNyenNNwViQFkANAFOhHKUo84QUAD0DRiji8DNOMJqADHrmeMWgFAgRrQAmIm9A9EhEGSBSgAulqWIGymRfxpwAH0DAAQSAnKWgdQASeJNibLEQzNOZwBzyCNrQnAEFoQoAAxMomBElggSqkgAAwFV5OAQZJ28ZwCCFaFCjSWxAObRAB8AJgRUj4BKIygApBGgk0MCkUMxFADVwIDCBY+OdMWgAG1xdOROdABshSMACAFX0QKD4hVCgwB2Mh6ZnAco8kNpAHsI4C8RY9CIiewAqyAZg6UNgAz7mgBkAxCbD25svIhqACgzbQNxciGqYNQAkARc2iVSMJ2lZADNJknADN80kC5jAOOUE5OONKUAsA0ARQLA1ABqDAEQCACIlnFgRPrqeUQyAKkAOV/GAUgi1RAAeAIX22Pv4uTlJABvEiKL1OBOaIWIAEsoNPRyRGQcMM0AQmzLIn0jGg0gNAAqsAQfVSb/NB1UAAi0AywKJQUIjCoA85ksYPNtqJExcQAYgoDzhYBwbWAdAKsgPswqlOqHbJMAUQlvpxLB1UzAGABpyxQ0mCs81wNXACHgmQEVxF1T9FUA8jrxkbDXWRJhoQBgoSwOksFRSSibACNkCSFowJxiMBYA4ek2cwRDk1DM8wCQCsQXTxHsamgRAEGGIlVQmcLwKhUAG+wigJjtKYW0HQC0OKRNEGFqXIOAbRpCReUGtgIAAAAASUVORK5CYII=);
 }
-body > header #editbar-wrapper .navbar-inner {
-  background-color: #999999;
-  background-image: -moz-linear-gradient(top, #999999, #999999);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#999999), to(#999999));
-  background-image: -webkit-linear-gradient(top, #999999, #999999);
-  background-image: -o-linear-gradient(top, #999999, #999999);
-  background-image: linear-gradient(to bottom, #999999, #999999);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff999999', endColorstr='#ff999999', GradientType=0);
-}
-body > header #editbar-wrapper .navbar-inner #editbar .brand {
-  color: #333333;
-}
-body > header #editbar-wrapper + nav {
-  margin-top: 40px;
-}
-body > header #editbar-wrapper + nav .navbar-inner {
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-}
-body > header #editbar-wrapper + nav .navbar-inner .container {
-  width: 940px;
-  margin-right: auto;
-  margin-left: auto;
-  *zoom: 1;
-}
-body > header #editbar-wrapper + nav .navbar-inner .container:before,
-body > header #editbar-wrapper + nav .navbar-inner .container:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-body > header #editbar-wrapper + nav .navbar-inner .container:after {
-  clear: both;
-}
 body > header #toolbar + nav {
   margin-top: 40px;
 }
@@ -6026,6 +5990,16 @@ body > header #toolbar + nav .navbar-inner .container:after {
 }
 body > header #toolbar + nav .navbar-inner .container:after {
   clear: both;
+}
+body > header #main-nav .selected > a,
+body > header #main-nav .selected > a:hover,
+body > header #main-nav .selected > a:focus {
+  color: #555555;
+  text-decoration: none;
+  background-color: #e5e5e5;
+  -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 }
 body > footer {
   margin-top: 20px;
