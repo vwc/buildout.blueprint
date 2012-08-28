@@ -200,6 +200,35 @@ dl.portalMessage {
     }
 }
 
+/* Pulldown menu state indicators */
+
+#plone-contentmenu-workflow {
+    .state-private,
+    .state-visible,
+    .state-published,
+    .state-pending,
+    .state-expired {
+        text-shadow: none;
+        border: none;
+        .badge();
+    }
+    .state-private {
+        background-color: @errorText;
+    }
+    .state-published {
+        background-color: @successText;
+    }
+    .state-pending {
+        background-color: @infoText;
+    }
+    .state-expired {
+        background-color: @orange;
+    }
+    .state-visible {
+        background-color: @grayDark;
+    }
+}
+
 /* styling for overlays (popups) */
 
 div.overlay {
