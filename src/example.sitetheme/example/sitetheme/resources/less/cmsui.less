@@ -164,13 +164,17 @@ input.datetime-widget,
 
 #content-core label {
     font-weight: bold;
+    .formHelp {
+        font-weight: normal;
+    }
 }
 
 div.field {
     .control-group();
 }
 
-div.formHelp {
+div.formHelp,
+span.formHelp {
     .help-block();
 }
 
@@ -192,6 +196,7 @@ span.required {
 
 dl.portalMessage {
     .alert();
+    font-size:@fontSizeSmall;
     dt {
         margin: 0;
     }

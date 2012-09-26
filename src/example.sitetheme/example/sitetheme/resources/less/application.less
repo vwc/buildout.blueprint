@@ -39,6 +39,33 @@ body > header {
     }
 }
 
+// Some eample styles for portlets
+
+.portlet {
+  .portletHeader {
+    font-size: @baseFontSize + 6;
+    padding: @paddingLarge;
+    border-bottom: 1px solid @grayLight;
+  }
+  .portletItem {
+    padding: @paddingLarge;
+  }
+  .portletFooter {
+    padding: @paddingLarge;
+    font-size: @fontSizeSmall;
+  }
+}
+
+// Example styles for listings (e.g. folder summary view)
+
+.tileItem {
+  .media();
+  .tileHeadline {
+    .media-heading();
+  }
+}
+
+
 // Example styles for a HMTL5 based site footer
 body > footer {
     margin-top: @baseLineHeight;

@@ -13,7 +13,7 @@
     <rules css:if-content="#visual-portal-wrapper">
 
         <notheme if="$ajax_load" />          
-        <theme href="theme.html" />
+        <theme href="fixed.html" />
         
         <!-- Add meta tags -->
         <drop theme="/html/head/meta" />
@@ -81,6 +81,9 @@
             css:theme-children="#sidebar-left" />
         <replace css:content-children="#portal-column-two > *"
             css:theme-children="#sidebar-right" />
+        <!-- example for the fixed.html template -->
+        <replace css:content-children="#portal-column-two > *"
+            css:theme-children="#sidebar" />
 
     </rules>
 
