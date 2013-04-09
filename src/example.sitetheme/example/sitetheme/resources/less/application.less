@@ -2,6 +2,10 @@
 //--------------------------------------
 
 
+// Override variables
+
+@font-size-base:          16px;
+
 body {
     //background: #f5f5f5;
 }
@@ -12,11 +16,18 @@ body {
     background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQAQMAAAC032DuAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMACHhIRQoAAAN7SURBVCiRAXADj/wAAkQJcM1mLQnAjAAb4sEhBjkWRBpWAIKF/FlkjVDJKKgA0KxA5QFOFWKpQgBG5PjjxiiDVJtnAHD5UwQVQstA7u8AOAYIMPmwiKga2gBooyeQA+jdVxiNABAIYGkr3lgTDBsAXQBAcGFmEGFEXQAwUgJEk6SsEMjDAApsetkgJK9PKJQAfDApaQUONGIDEgAKpcRsXsojEuY1ACYN4xSjdyGRVLcAsCBxpEiAUIkwYgBGLNoX24Yj9iJRAGMGy8gopJFOQvkAEZgtO9HAJC+9WACKQEJCwJGqpRoIAKYmUxdgMdl89AIApMRLQ/2pQLVbBQBDTLPsYJCDUEjoAHzhwoxoCKB4DAgAAN6ASuQFERMyvQCzWAJoFpkGjFsGAGLQnTrBTH4zIKIAFGUFG3UALzJDiwCmsCEwxUDwgFgIAFi/LtLBIAUJNBEAE4TENLhU8TjOCgAtAYILmwxnJrBoAAhNyenNNwViQFkANAFOhHKUo84QUAD0DRiji8DNOMJqADHrmeMWgFAgRrQAmIm9A9EhEGSBSgAulqWIGymRfxpwAH0DAAQSAnKWgdQASeJNibLEQzNOZwBzyCNrQnAEFoQoAAxMomBElggSqkgAAwFV5OAQZJ28ZwCCFaFCjSWxAObRAB8AJgRUj4BKIygApBGgk0MCkUMxFADVwIDCBY+OdMWgAG1xdOROdABshSMACAFX0QKD4hVCgwB2Mh6ZnAco8kNpAHsI4C8RY9CIiewAqyAZg6UNgAz7mgBkAxCbD25svIhqACgzbQNxciGqYNQAkARc2iVSMJ2lZADNJknADN80kC5jAOOUE5OONKUAsA0ARQLA1ABqDAEQCACIlnFgRPrqeUQyAKkAOV/GAUgi1RAAeAIX22Pv4uTlJABvEiKL1OBOaIWIAEsoNPRyRGQcMM0AQmzLIn0jGg0gNAAqsAQfVSb/NB1UAAi0AywKJQUIjCoA85ksYPNtqJExcQAYgoDzhYBwbWAdAKsgPswqlOqHbJMAUQlvpxLB1UzAGABpyxQ0mCs81wNXACHgmQEVxF1T9FUA8jrxkbDXWRJhoQBgoSwOksFRSSibACNkCSFowJxiMBYA4ek2cwRDk1DM8wCQCsQXTxHsamgRAEGGIlVQmcLwKhUAG+wigJjtKYW0HQC0OKRNEGFqXIOAbRpCReUGtgIAAAAASUVORK5CYII=);
 }
 
+// Use Blokk font as a lorem ipsum replacement
+.wireframed {
+  font-family: 'BLOKKNeue-Regular';
+  font-size: @line-height-base;
+  color: @gray;
+}
+
 // Example styles for a custom editbar override of the basic
 // twitter bootstarp navbar to make the edit bar look like a
 // browser toolbar
 body > header {
-    margin-bottom: @baseLineHeight;
+    margin-bottom: @line-height-base;
     #toolbar + nav {
         margin-top: @navbar-height;
         .navbar-inner {
@@ -27,9 +38,9 @@ body > header {
     #main-nav .selected > a,
     #main-nav .selected > a:hover,
     #main-nav .selected > a:focus {
-      color: @navbar-link-color-active;
+      color: @navbar-link-active-color;
       text-decoration: none;
-      background-color: @navbar-link-bg-active;
+      background-color: @navbar-link-active-bg;
       -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
          -moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
               box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
@@ -40,16 +51,16 @@ body > header {
 
 .portlet {
   .portletHeader {
-    font-size: @baseFontSize + 6;
-    padding: @paddingLarge;
+    font-size: @font-size-base * 1.5;
+    padding: @padding-large;
     border-bottom: 1px solid @grayLight;
   }
   .portletItem {
-    padding: @paddingLarge;
+    padding: @padding-large;
   }
   .portletFooter {
-    padding: @paddingLarge;
-    font-size: @fontSizeSmall;
+    padding: @padding-large;
+    font-size: @font-size-small;
   }
 }
 
