@@ -13,8 +13,10 @@
     <rules css:if-content="#visual-portal-wrapper">
 
         <notheme if="$ajax_load" />          
-        <theme href="fixed.html" />
-        
+        <theme href="theme.html" />
+
+        <replace css:theme="title" css:content="title" />
+        <replace css:theme="base" css:content="base" />
         <!-- Add meta tags -->
         <drop theme="/html/head/meta" />
         

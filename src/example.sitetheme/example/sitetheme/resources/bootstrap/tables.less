@@ -5,7 +5,7 @@
 
 table {
   max-width: 100%;
-  background-color: @table-background;
+  background-color: @table-bg;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -48,7 +48,7 @@ th {
 
   // Nesting
   .table {
-    background-color: @body-background;
+    background-color: @body-bg;
   }
 }
 
@@ -150,10 +150,10 @@ th {
 
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
 .table-striped {
-  tbody {
+  > tbody {
     > tr:nth-child(odd) > td,
     > tr:nth-child(odd) > th {
-      background-color: @table-background-accent;
+      background-color: @table-bg-accent;
     }
   }
 }
@@ -162,12 +162,13 @@ th {
 
 // HOVER EFFECT
 // ------------
+
 // Placed here since it has to come after the potential zebra striping
 .table-hover {
-  tbody {
-    tr:hover > td,
-    tr:hover > th {
-      background-color: @table-background-hover;
+  > tbody {
+    > tr:hover > td,
+    > tr:hover > th {
+      background-color: @table-bg-hover;
     }
   }
 }
@@ -177,39 +178,60 @@ th {
 // TABLE CELL SIZING
 // -----------------
 
-// Reset default grid behavior
-table td[class*="span"],
-table th[class*="span"] {
+// Reset default table behavior
+table col[class*="col-span-"] {
+  float: none;
+  display: table-column;
+}
+table td[class*="col-span-"],
+table th[class*="col-span-"] {
+  float: none;
   display: table-cell;
-  float: none; // undo default grid column styles
-  margin-left: 0; // undo default grid column styles
 }
 
 // TABLE BACKGROUNDS
 // -----------------
 // Exact selectors below required to override .table-striped
 
-.table tbody tr {
+.table > tbody > tr {
+  > td.success,
+  > th.success,
   &.success > td {
-    background-color: @state-success-background;
+    background-color: @state-success-bg;
+    border-color: @state-success-border;
   }
-  &.error > td {
-    background-color: @state-error-background;
+  > td.danger,
+  > th.danger,
+  &.danger > td {
+    background-color: @state-danger-bg;
+    border-color: @state-danger-border;
   }
+  > td.warning,
+  > th.warning,
   &.warning > td {
-    background-color: @state-warning-background;
+    background-color: @state-warning-bg;
+    border-color: @state-warning-border;
   }
 }
 
 // Hover states for .table-hover
-.table-hover tbody tr {
+.table-hover > tbody > tr {
+  > td.success:hover,
+  > th.success:hover,
   &.success:hover > td {
-    background-color: darken(@state-success-background, 5%);
+    background-color: darken(@state-success-bg, 5%);
+    border-color: darken(@state-success-border, 5%);
   }
-  &.error:hover > td {
-    background-color: darken(@state-error-background, 5%);
+  > td.danger:hover,
+  > th.danger:hover,
+  &.danger:hover > td {
+    background-color: darken(@state-danger-bg, 5%);
+    border-color: darken(@state-danger-border, 5%);
   }
+  > td.warning:hover,
+  > th.warning:hover,
   &.warning:hover > td {
-    background-color: darken(@state-warning-background, 5%);
+    background-color: darken(@state-warning-bg, 5%);
+    border-color: darken(@state-warning-border, 5%);
   }
 }
